@@ -16,7 +16,7 @@ const SidebarItem = ({ item }: Props) => {
     item.sidebarProps && item.path ? (
       <>
       {!item.heading ? "" :
-      <div style={{paddingTop:"10px",paddingLeft:"20px", fontSize:"0.9em", textTransform: "uppercase"}}>{item.heading}</div>
+      <div style={{paddingTop:"10px",paddingLeft:"20px", fontSize:"0.9em", textTransform: "uppercase", color: "#9e9e9e"}}>{item.heading}</div>
       }
       <ListItemButton
         component={Link}

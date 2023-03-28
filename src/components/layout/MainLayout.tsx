@@ -76,7 +76,6 @@ const MainLayout = () => {
           backgroundColor: colorConfigs.mainBg,
         }}
       >
-        <Toolbar />
         <Outlet />
       </Box>
     </Box>
