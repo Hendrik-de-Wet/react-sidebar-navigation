@@ -4,4 +4,4 @@
 - Material-UI: https://mui.com/
 - React-router: https://reactrouter.com/
 
-https://raw.githubusercontent.com/<username>/<repo name>/<branch>/<path to file>
+![logo](https://raw.githubusercontent.com/Hendrik-de-Wet/react-sidebar-navigation/main/src/assets/images/logo.png)
