@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export type RouteType = {
-  heading: string,
+  heading?: string,
   element: ReactNode,
   state: string,
   index?: boolean,

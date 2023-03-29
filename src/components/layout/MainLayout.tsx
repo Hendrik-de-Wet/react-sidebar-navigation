@@ -1,12 +1,11 @@
-import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import { Button, Box, Toolbar, IconButton, Avatar } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import { AppBar, Typography, Box, Toolbar, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import colorConfigs from "../../configs/colorConfigs";
 import sizeConfigs from "../../configs/sizeConfigs";
-import Sidebar from "../common/Sidebar";
-import { AppBar, Typography } from "@mui/material";
 import UserProfile from "../common/UserProfile";
+import Sidebar from "../common/Sidebar";
 
 const MainLayout = () => {
   const [isOpen, setIsopen] = useState(false);
@@ -22,9 +21,8 @@ const MainLayout = () => {
 
   return (
     <Box sx={{ display: "flex" }}>
-      {/* <Topbar /> */}
-
-      <AppBar
+       
+       <AppBar
         position="fixed"
         sx={{
           ...(isOpen
@@ -49,9 +47,10 @@ const MainLayout = () => {
             <UserProfile />
           </div>
         </Toolbar>
-      </AppBar>
+      </AppBar> 
+
       <Box
-        style={styles}
+         style={styles}
         component="nav"
         sx={{
           width: isOpen ? sizeConfigs.sidebar.width : "0px",
@@ -61,7 +60,7 @@ const MainLayout = () => {
       >
         <Sidebar />
       </Box>
-      <Box
+      <Box style={{}}
         component="main"
         sx={{
           flexGrow: 1,
@@ -76,6 +75,7 @@ const MainLayout = () => {
           backgroundColor: colorConfigs.mainBg,
         }}
       >
+        <Toolbar />
         <Outlet />
       </Box>
     </Box>

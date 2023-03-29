@@ -1,11 +1,19 @@
 
 # React Sidebar Navigation
 
-An expandable and collapsible component that typically acts as a side container to place primary or secondary content alongside the main content. It provides flexible options to be shown and hidden based on user interactions.
+A basic React multi-level navigation sidebar menu component with React, TypeScript and MaterialUI. The expandable and collapsible component provides flexible options to be shown and hidden based on user interactions.
+
 
 ![logo](https://raw.githubusercontent.com/Hendrik-de-Wet/react-sidebar-navigation/main/public/react-sidebar-navigation.png)
 
+## Introduction
+Install the node modules npm install
+Start the project npm start
+
+
 ## References
-- Create react app:https://create-react-app.dev/
-- Material-UI: https://mui.com/
-- React-router: https://reactrouter.com/
+- React - https://create-react-app.dev/
+- React-router - https://reactrouter.com/
+- Material-UI - https://mui.com/
+
+

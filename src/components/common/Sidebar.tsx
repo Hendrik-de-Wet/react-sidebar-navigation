@@ -11,7 +11,6 @@ const Sidebar = () => {
     transition: "width 1s",
   };
 
-  
   return (
     <Drawer
       variant="permanent"
@@ -32,10 +31,7 @@ const Sidebar = () => {
       <List disablePadding>
         <Toolbar sx={{ marginBottom: "20px" }}>
           <Stack sx={{ width: "100%" }} direction="row" justifyContent="center">
-            <img src={assets.images.logo} style={{ paddingTop: "20px",width: "150px"  
-          
-          
-          }}/>
+            <img src={assets.images.logo} style={{width: "200px", paddingTop: "20px"}}/>
           </Stack>
         </Toolbar>
         {appRoutes.map((route, index) =>

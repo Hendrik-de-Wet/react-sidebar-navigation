@@ -1,103 +1,97 @@
-import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
-import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
-import DefaultPage from "../pages/dashboard/DefaultPage";
+ // Pages
+import HomePage from "../pages/home/HomePage";
+import IntroductionPage from "../pages/introduction/IntroductionPage";
 import DashboardIndex from "../pages/dashboard/DashboardIndex";
-import SettingsPage from "../pages/settings/SettingsPage";
+import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
+import DefaultPage from "../pages/dashboard/DefaultPage";
 import AdditionalPage from "../pages/dashboard/AdditionalPage";
 import ComponentPageLayout from "../pages/components/ComponentsPageLayout";
-import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import GridPage from "../pages/components/GridPage";
 import ButtonsPage from "../pages/components/ButtonsPage";
-import InstallationPage from "../pages/introduction/IntroductionPage";
+import SettingsPage from "../pages/settings/SettingsPage";
 import DocumentationPage from "../pages/documentation/DocumentationPage";
+// Icons
+import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
+import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
+import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 
 const appRoutes: RouteType[] = [
   {
     index: true,
-    heading: "",
     element: <HomePage />,
-    state: "home"
+    state: "home",
   },
   {
     heading: "General",
     path: "/introduction",
-    element: <InstallationPage />,
+    element: <IntroductionPage />,
     state: "introduction",
     sidebarProps: {
       displayText: "Introduction",
-      icon: <HomeOutlinedIcon />
-    }
+      icon: <HomeOutlinedIcon />,
+    },
   },
   {
-    heading: "",
     path: "/dashboard",
     element: <DashboardPageLayout />,
     state: "dashboard",
     sidebarProps: {
       displayText: "Dashboard",
-      icon: <DashboardOutlinedIcon />
+      icon: <DashboardOutlinedIcon />,
     },
     child: [
       {
-        heading: "",
         index: true,
         element: <DashboardIndex />,
-        state: "dashboard.index"
+        state: "dashboard.index",
       },
       {
-        heading: "",
         path: "/dashboard/default",
         element: <DefaultPage />,
         state: "dashboard.default",
         sidebarProps: {
-          displayText: "Default"
+          displayText: "Default",
         },
       },
       {
-        heading: "",
         path: "/dashboard/additional",
         element: <AdditionalPage />,
         state: "dashboard.additional",
         sidebarProps: {
-          displayText: "Additional"
-        }
-      }
-    ]
+          displayText: "Additional",
+        },
+      },
+    ],
   },
   {
-    heading: "",
     path: "/component",
     element: <ComponentPageLayout />,
     state: "component",
     sidebarProps: {
       displayText: "Components",
-      icon: <AppsOutlinedIcon />
+      icon: <AppsOutlinedIcon />,
     },
     child: [
       {
-        heading: "",
         path: "/component/grid",
         element: <GridPage />,
         state: "component.grid",
         sidebarProps: {
-          displayText: "Data Grid"
+          displayText: "Data Grid",
         },
       },
       {
-        heading: "",
         path: "/component/buttons",
         element: <ButtonsPage />,
         state: "component.buttons",
         sidebarProps: {
-          displayText: "Buttons"
-        }
-      }
-    ]
+          displayText: "Buttons",
+        },
+      },
+    ],
   },
   {
     heading: "SETTINGS",
@@ -106,19 +100,18 @@ const appRoutes: RouteType[] = [
     state: "documentation",
     sidebarProps: {
       displayText: "Documentation",
-      icon: <ArticleOutlinedIcon />
-    }
+      icon: <ArticleOutlinedIcon />,
+    },
   },
   {
-    heading: "",
     path: "/settings",
     element: <SettingsPage />,
     state: "settings",
     sidebarProps: {
       displayText: "Settings",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  }
+      icon: <FormatListBulletedOutlinedIcon />,
+    },
+  },
 ];
 
 export default appRoutes;
